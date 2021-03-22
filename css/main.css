@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: merriweather, serif;
+  font-family: Merriweather, serif;
   line-height: 1.5;
 }
 
@@ -12,4 +12,24 @@ html {
 
 h1, h2 {
   font-style: italic;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  gap: .75rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-areas:
+  "banner"
+  "main";
+}
+
+header {
+  grid-area: banner;
+}
+
+main {
+  grid-area: main;
 }
