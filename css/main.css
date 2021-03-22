@@ -1,9 +1,15 @@
 html {
   box-sizing: border-box;
+  font-family: merriweather, serif;
+  line-height: 1.5;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-/* font-family: "Merriweather", serif; */
+/* font-family: Merriweather, serif; */
+
+h1, h2 {
+  font-style: italic;
+}
