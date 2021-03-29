@@ -2,43 +2,85 @@ html {
   box-sizing: border-box;
   font-family: Merriweather, serif;
   line-height: 1.5;
+  align-self: auto;
+  font-weight: normal;
+  letter-spacing: -.35px;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /* font-family: Merriweather, serif; */
 
-h1, h2 {
+h1, h2, dt {
   font-style: italic;
+  font-weight: normal;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  align-self: auto;
-
-  grid-template-columns: 1fr;
-  display: grid;
-  grid-template-areas:
-  "banner"
-  "main";
+h1 {
+  font-size: 1.8rem;
+  margin: 1.5rem 1rem;
 }
 
-.main-grid {
-  list-style-type: none;
-  padding: 0;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-  gap: .75rem;
+h2 {
+  font-size: 1.5rem;
 }
 
-header {
-  grid-area: banner;
+dd {
+  margin-left: 1rem;
+}
+
+figcaption {
+  margin: .75rem 1rem 1rem;
 }
 
 main {
-  grid-area: main;
+  list-style-type: none;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-areas:
+    "banner banner banner"
+    "col1 col2 col3";
+  gap: .75em;
+}
+
+img {
+  width: 100%;
+}
+
+.col1 {
+  grid-area: col1;
+  padding: 0;
+  margin: -.15rem 0 0;
+}
+
+.col2 {
+  grid-area: col2;
+  padding: 0;
+  margin: -.15rem 0 0;
+}
+
+.col3 {
+  grid-area: col3;
+  padding: 0;
+  margin: -.15rem 0 0;
+}
+
+.banner {
+  grid-area: banner;
+  position: relative;
+  text-align: left;
+  color: #fff;
+  margin-bottom: -.25rem;
+}
+
+.bottom-left {
+  padding: 1.5rem 1rem;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
 }
